@@ -9,11 +9,13 @@ const maxItems = 5;
 
 
 function addItem(newItem) {
-  if(isFull()){ //isFull() will return true if the number of items is equal to or more than variabel maxItems
+  if(isFull()){ //isFull() will return true if the number of items is equal to or more than variable maxItems
     return false; //false is returned to indicate more items cannot be added
   }
+  else {
     basket.push(newItem); //if isFull() returned false (meaning there is less than the max number of items), the newItem is added to basket
     return true; //function also returns true to confirm the item was added
+  }
 }
 
 function listItems(){
@@ -33,6 +35,8 @@ console.log('Basket now contains:');
 listItems(); //testing the list item function
 
 
+console.log(basket)
+console.log("what does the variable basket contain now:", basket)
 function empty(){
   basket = []; //Simply sets the array "basket" to an empty array
 }
